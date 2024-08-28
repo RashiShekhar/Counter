@@ -8,9 +8,9 @@ export default function App(){
         const [count, setCount]=useState(0)
     return(
         <div>
-          <h1>Counters: </h1>
+          
             <Counter/>
-            
+
             <Counter2 />
         </div>
     );

@@ -22,21 +22,27 @@ export default function Counter(){
     },[count])
 
     return(
-        <div className="w-[8%] h-50% p-5px flex border border-black bg-whitesmoke font-size-medium">
-            <button className="btn flex items-center w-3 mx-3 bg-transparent font-size-medium cursor-pointer m-4s content-center  text-black" onClick={handleClick}>
+        <div className="w-[10%] h-50% p-5px flex gap-2 border border-black bg-whitesmoke font-size-medium align-content:center justify-content:center text-align:center">
+            <div className="flex gap-2">
+            <button className="btn flex items-center w-4 mx-3 bg-transparent font-size-medium cursor-pointer m-4s content-center  text-black" onClick={handleClick}>
             <FaTrash/>
             </button>
+            </div>
+            <div className="flex gap-2 items-center">
             <button className="btn flex size-5 mx-1  items-center bg-transparent font-size-medium text-black cursor-pointer" onClick={handleDecrement}>
                 <FaChevronDown/>
             </button>
+            </div>
             <div flex w-3 mx-2 >
 
                 {count}
 
             </div>
+            <div className="flex gap-2">
             <button className="btn flex items-center mx-2 bg-transparent font-size-medium text-black cursor-pointer" onClick={handleIncrement}>
                 <FaChevronUp/>
             </button>
+            </div>
         </div>
 
     );
