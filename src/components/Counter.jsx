@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from "react";
-import { FaTrash,FaChevronDown, FaChevronUp } from "react-icons/fa";
-
+import {FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FaTrashCan } from "react-icons/fa6";
 
 export default function Counter(){
     const [count,setCount]=useState(0)
@@ -22,10 +22,10 @@ export default function Counter(){
     },[count])
 
     return(
-        <div className="flex h-screen justify-center items-center">
+        <div className="flex justify-center items-center border-2 border-black bg-whitesmoke">
             <div className="flex gap-2 items-center">
-            <button className="btn flex items-center w-4 mx-3 bg-transparent font-size-medium cursor-pointer m-4s content-center  text-black" onClick={handleClick}>
-            <FaTrash/>
+            <button className="btn flex items-center w-4 mx-3 bg-transparent font-size-medium cursor-pointer m-4s content-center  text-black fa-trash-can" onClick={handleClick}>
+            <FaTrashCan/>
             </button>
             </div>
             <div className="flex gap-2 items-center">
@@ -33,7 +33,7 @@ export default function Counter(){
                 <FaChevronDown/>
             </button>
             </div>
-            <div className="flex w-3 mx-2" >
+            <div className >
 
                 {count}
 

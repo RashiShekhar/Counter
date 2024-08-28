@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from "react";
-
+import { CiCircleMinus } from "react-icons/ci";
+import { CiCirclePlus } from "react-icons/ci";
  
 
 export default function Counter(){
@@ -19,17 +20,23 @@ export default function Counter(){
     },[count])
 
     return(
-      <div className="flex flex-direction-row gap-3">
+      <div className="flex gap-2 items-center justify-center border-2 border-black bg-whitesmoke w-[13%] h-50% p-5px ">
         <h2> Default: </h2> 
-        <button className="btn flex flex-direction-row size-5 items-center gap-2 border-rounded-full font-size-medium text-black cursor-pointer rounded-full bg-gray-400 justify-center" 
+        <div className="flex gap-2 items-center ">
+        <button className="btn flex flex-direction-row size-4 items-center gap-1 text-black font-size-medium text-black bg-transparent cursor-pointer justify-center" 
         onClick={handleDecrement}>
-                -
+                {CiCircleMinus}
             </button>
+            </div>
+            <div className="flex w-3 mx-2">
              {count}
-            <button className="btn flex flex-direction-row size-5 items-center gap-2 border-rounded-full font-size-medium text-black cursor-pointer rounded-full bg-gray-400 justify-center" 
+             </div>
+             <div className="flex gap-px items-center"> 
+            <button className="btn flex flex-direction-row size-4 items-center gap-2 font-size-medium text-black bg-transparent cursor-pointer justify-center" 
             onClick={handleIncrement}>
-                +
+                {CiCirclePlus}
             </button>
+            </div>
     </div>  
     );
 }

@@ -7,7 +7,7 @@ import Counter2 from "./components/Counter2";
 export default function App(){
         const [count, setCount]=useState(0)
     return(
-        <div>
+        <div className="flex flex-col space-y-4 h-screen items-center justify-center">
           
             <Counter/>
 
